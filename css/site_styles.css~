@@ -1,4 +1,2 @@
-#From http://learn.jquery.com/javascript-101/getting-started/
-
 h1 { font-size: 14px; color: red; }
 button { color: blue; }
