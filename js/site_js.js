@@ -51,15 +51,12 @@ $(function() {
 	for(var i = 0; i < comments.length; i++) {
 		$('body').append("<p>" + comments[i].commentBody + "</p>");
 	}
-});
+})
 
-//Word count function
-//From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+function splitString(comments[i].commentBody, separator) {
+  var arrayOfStrings = comments[i].commentBody.split(separator);
 
-function splitString(stringToSplit, separator) {
-  var arrayOfStrings = stringToSplit.split(separator);
-
-  $('body').append("<p>" + 'The original comment text is: "' + stringToSplit + '"' + "</p>");
+  $('body').append("<p>" + 'The original comment text is: "' + comments[i].commentBody + '"' + "</p>");
   $('body').append("<p>" + 'The separator is: "' + separator + '"' + "</p>");
   $('body').append("<p>" + "The comment has " + arrayOfStrings.length + " elements: " + "</p>");
 
@@ -67,11 +64,9 @@ function splitString(stringToSplit, separator) {
     document.write(arrayOfStrings[i] + " / ");
 }
 
-var text1 = "Unfortunately, I must agree more with the analysis of despair written by Mr. James than a less than convincing optimism of Dr. Krugman. In 1855 Walt Whitman promulgated an ecstatic and exalted vision of democracy in \"song of Myself.\" Several decades later in his \"democratic Vistas\" he descended into despair when confronted with the crass reality of social division, greed, the ascent of the robber barons which dashed the optimism he nurtured in 1855. These two works of a great American writer mirror the statements of Dr. Krugman and Mr. James. To my great chagrin I must side with Mr. James.";
-
-var text2 = "Hi, Mom.  Correct as he most often is, Professor Krugman has obviously shut his eyes on matters of 'democracy'.  He completely ignores the recent (THIS WEEK) assaults on Women's Rights, Voting Rights and others essential to the life of 'democracy'.";
-
 var space = " ";
 
-splitString(text1, space);
-splitString(text2, space);
+splitString(comments[i].commentBody, space);
+
+//Word count function
+//From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
