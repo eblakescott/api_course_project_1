@@ -8,3 +8,9 @@ For future projects I'll need to determine how to proceed with using this JSON d
 One issue I had was when I added more comments to my javascript file my laptop slowed down to the point of being unusable. I'm not sure if the problem lies with my laptop (4gb memory, ubuntu) or with javascript.
 
 In terms of my progress in the course, I have had trouble negotiating the javascript and programming terminology in the readings. I think with the upcoming focus on javascript and browser interactions and the DOM I'll start to figure it out. 
+
+Simple word count function: 
+
+function wordCount (text) {
+	return "The number of words in your text is: " + text.split([" "]).length;
+}

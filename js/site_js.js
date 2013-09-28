@@ -53,6 +53,9 @@ $(function() {
 	}
 })
 
+//Word count function
+//From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+
 function splitString(comments[i].commentBody, separator) {
   var arrayOfStrings = comments[i].commentBody.split(separator);
 
@@ -67,6 +70,3 @@ function splitString(comments[i].commentBody, separator) {
 var space = " ";
 
 splitString(comments[i].commentBody, space);
-
-//Word count function
-//From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
