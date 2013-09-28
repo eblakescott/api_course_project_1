@@ -46,27 +46,18 @@ var comments = [
 
 ]
 
-$(function() {
+$(function(showText) {
 
 	for(var i = 0; i < comments.length; i++) {
 		$('body').append("<p>" + comments[i].commentBody + "</p>");
 	}
 })
 
-//Word count function
-//From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
-function splitString(comments[i].commentBody, separator) {
-  var arrayOfStrings = comments[i].commentBody.split(separator);
+$(function(wordCount) {
 
-  $('body').append("<p>" + 'The original comment text is: "' + comments[i].commentBody + '"' + "</p>");
-  $('body').append("<p>" + 'The separator is: "' + separator + '"' + "</p>");
-  $('body').append("<p>" + "The comment has " + arrayOfStrings.length + " elements: " + "</p>");
+for(var i = 0; i < comments.length; i++) {
+		$('body').append("<p>" + "The number of words in your text is: " + comments[i].commentBody.split([" "]).length + "</p>");
+	}
+})
 
-  for (var i=0; i < arrayOfStrings.length; i++)
-    document.write(arrayOfStrings[i] + " / ");
-}
-
-var space = " ";
-
-splitString(comments[i].commentBody, space);
