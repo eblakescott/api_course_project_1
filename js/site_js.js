@@ -61,3 +61,10 @@ for(var i = 0; i < comments.length; i++) {
 	}
 })
 
+
+$(function(typeToken) {
+
+for(var i = 0; i < comments.length; i++) {
+		$('body').append("<p>" + "The type-token ratio of words in your text is: " + comments[i].commentBody.split([" "]).length / comments[i].commentBody.split([" "]).length + "</p>");
+	}
+})
